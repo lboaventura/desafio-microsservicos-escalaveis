@@ -1,0 +1,11 @@
+services:
+  orders-database:
+    image: postgres:17.5-alpine3.22
+    ports:
+      - 5482:5432
+    environment:
+      - POSTGRES_USER=docker
+      - POSTGRES_PASSWORD=docker
+      - POSTGRES_DB=orders
+    volumes:
+      - ./docker:/docker-entrypoint-initdb.d
