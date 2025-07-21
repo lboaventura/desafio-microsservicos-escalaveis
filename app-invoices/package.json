@@ -13,6 +13,9 @@
   "license": "ISC",
   "dependencies": {
     "@fastify/cors": "^11.0.1",
+    "@opentelemetry/auto-instrumentations-node": "^0.62.0",
+    "@opentelemetry/sdk-node": "^0.203.0",
+    "@opentelemetry/sdk-trace-node": "^2.0.1",
     "amqplib": "^0.10.8",
     "drizzle-orm": "^0.44.2",
     "fastify": "^5.3.3",
@@ -20,9 +23,6 @@
     "zod": "^3.25.51"
   },
   "devDependencies": {
-    "@opentelemetry/auto-instrumentations-node": "^0.60.1",
-    "@opentelemetry/sdk-node": "^0.202.0",
-    "@opentelemetry/sdk-trace-node": "^2.0.1",
     "@tsconfig/node23": "^23.0.2",
     "@types/amqplib": "^0.10.7",
     "@types/node": "^22.15.29",
