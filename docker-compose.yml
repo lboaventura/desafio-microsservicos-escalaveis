@@ -1,6 +1,9 @@
 services:
   broker:
     image: rabbitmq:3-management
+    environment:
+      RABBITMQ_DEFAULT_USER: admin
+      RABBITMQ_DEFAULT_PASS: admin
     ports:
       - 5672:5672 # Messages
       - 15672:15672 # UI
