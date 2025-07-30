@@ -39,9 +39,9 @@ app.post(
   async (request, reply) => {
     const { amount } = request.body;
 
-    console.log("Creating an order with amount", amount);
-
     const orderId = randomUUID();
+
+    console.log(`Creating order ${orderId} with amount ${amount}`);
 
     await db.insert(schema.orders).values({
       id: orderId,
@@ -52,7 +52,7 @@ app.post(
     // Testing tracing
     const span = tracer.startSpan("code with delay");
     span.setAttribute("test", "it's a test!");
-    await setTimeout(2000);
+    await setTimeout(100);
     span.end();
 
     // Testing tracing
